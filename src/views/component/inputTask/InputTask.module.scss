@@ -1,0 +1,59 @@
+.input_task{
+  display: grid;
+  grid-template-columns: 1fr 50px 50px;
+  margin-bottom: 15px;
+  background: #DBE2EF;
+  border-radius: 5px;
+  padding-right: 10px;
+
+  &_label{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 12px 15px;
+
+    &_check{
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    &_title{
+      padding: 5px;
+      line-height: 1.2;
+    }
+
+    &_edit{
+      font: 1rem/1em 'Roboto', sans-serif;
+      border: none;
+      padding: 5px;
+      background: none;
+      box-shadow: 0 4px 0 -3px #3F72Af;
+    }
+  }
+
+  &_edit, &_remove, &_save{
+    display: block;
+    border: none;
+    background: none no-repeat center center;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+
+  &_edit{
+    background-image: url("./images/edit.svg");
+  }
+
+  &_remove{
+    background-image: url("./images/trash.svg");
+  }
+
+  &_save{
+    background-image: url("./images/check.svg");
+  }
+}
